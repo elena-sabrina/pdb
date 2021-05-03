@@ -1,0 +1,63 @@
+@import "./../styles/General.scss";
+//@import cursor-small from "./../styles/images/cursor-small.png";
+
+//DESKTOP
+
+@media only screen and (min-width: $desktop) {
+  .video {
+    display: flex;
+    justify-content: center;
+    img {
+      max-width: 100%;
+      //height: auto;
+      max-height: 700px;
+    }
+  }
+}
+
+//TABLET
+.hero {
+  background-color: white;
+  margin-top: 10px !important;
+}
+.hero-copy {
+  grid-column: 1 / 5;
+  grid-row: 1 / 2;
+
+  display: flex;
+  align-items: flex-end;
+  text-align: left;
+  padding: 0 0 10em 0;
+}
+
+.video {
+  grid-column: 7/13;
+  grid-row: 1/2;
+
+  display: flex;
+  align-items: flex-end;
+  // margin: 0 -50px 0 0;
+  margin: 0 -10vh 0 0;
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+//MOBILE
+@media only screen and (max-width: $mobile) {
+  .hero-copy {
+    display: flex;
+    align-items: flex-end;
+    padding: 2em;
+  }
+
+  .video {
+    margin: 0 -15px 0 0;
+    img {
+      max-height: 400px;
+      width: 100%;
+    }
+  }
+}

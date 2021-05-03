@@ -1,0 +1,57 @@
+.Nav {
+  -webkit-animation: fadeinNav 1s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadeinNav 1s; /* Firefox < 16 */
+  -ms-animation: fadeinNav 1s; /* Internet Explorer */
+  -o-animation: fadeinNav 1s; /* Opera < 12.1 */
+  animation: fadeinNav 1s;
+
+  .logo:hover {
+    -webkit-animation: cursortransform 3s ease; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: cursortransform 3s ease; /* Firefox < 16 */
+    -ms-animation: cursortransform 3s ease; /* Internet Explorer */
+    -o-animation: cursortransform 3s ease; /* Opera < 12.1 */
+    animation: cursortransform 3s ease;
+  }
+  .hamburger:hover {
+    -webkit-animation: cursortransform 3s ease; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: cursortransform 3s ease; /* Firefox < 16 */
+    -ms-animation: cursortransform 3s ease; /* Internet Explorer */
+    -o-animation: cursortransform 3s ease; /* Opera < 12.1 */
+    animation: cursortransform 3s ease;
+  }
+}
+
+@keyframes fadeinNav {
+  0% {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    animation-delay: 10s;
+  }
+}
+
+@keyframes cursortransform {
+  0% {
+    cursor: url(./../styles/images/cursor-normal.svg), auto;
+  }
+  15% {
+    cursor: url(./../styles/images/cursor-1.svg), auto;
+  }
+  25% {
+    cursor: url(./../styles/images/cursor-2.svg), auto;
+  }
+  35% {
+    cursor: url(./../styles/images/cursor-3.svg), auto;
+  }
+  45% {
+    cursor: url(./../styles/images/cursor-big.svg), auto;
+  }
+
+  100% {
+    cursor: url(./../styles/images/cursor-big.svg), auto;
+  }
+}

@@ -1,0 +1,150 @@
+@import "./../styles/General";
+
+//DESKTOP
+
+@media only screen and (min-width: 1060px) {
+}
+
+//MOBILE
+@media only screen and (max-width: 600px) {
+  .Nav {
+    margin: 0;
+    padding: 0;
+  }
+  .Navbar {
+    margin: 0;
+  }
+}
+
+//TABLET
+.Nav {
+  margin: 10px 5vh;
+  max-height: 72px;
+  -webkit-animation: fadeinNav 1s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadeinNav 1s; /* Firefox < 16 */
+  -ms-animation: fadeinNav 1s; /* Internet Explorer */
+  -o-animation: fadeinNav 1s; /* Opera < 12.1 */
+  animation: fadeinNav 1s;
+
+  .Navbar {
+    background-color: $white;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: $white;
+    align-items: center;
+    .logo {
+      display: block;
+
+      height: 60px;
+      width: 106px;
+    }
+    .logo:hover {
+      transform: scale(1.08);
+      transition: all 0.5s ease;
+      box-sizing: border-box;
+    }
+  }
+
+  .hamburger {
+    cursor: pointer;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    .line {
+      // margin: 0;
+      //width: 25px;
+      // height: 1.5px;
+      background-color: black;
+      //margin: 6px 0;
+      margin: 0.3rem 0;
+      // color: black;
+      display: block;
+      width: 2rem;
+      height: 1px;
+    }
+
+    .linetwo {
+      display: flex;
+      width: 1.5rem;
+    }
+
+    .linethree {
+      background: none;
+    }
+  }
+
+  .hamburger:hover {
+    transform: scale(1.08);
+    transition: all 0.5s ease;
+  }
+
+  .nav-links {
+    background: linear-gradient(172.63deg, #ffffff 5.73%, #ffffff 80.16%);
+    height: 100vh;
+    width: 100%;
+    clip-path: circle(10px at 100% -10%);
+    -webkit-clip-path: circle(10px at 100% -10%);
+    transition: all 0.005s ease-out;
+  }
+  .nav-links.open {
+    clip-path: circle(1000px at 50% 50%);
+    -webkit-clip-path: circle(1000px at 50% 50%);
+    pointer-events: all;
+    height: 100vh;
+    text-align: center;
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+
+      width: 500px;
+      height: 500px;
+      margin: 0 auto;
+
+      a {
+        text-decoration: none;
+      }
+      .nav-image {
+        width: 400px;
+        height: auto;
+        margin: 0 100px 0 0;
+      }
+      div {
+        div {
+          margin: 3em 0 5em 2.5em;
+          display: flex;
+          flex-direction: center;
+          width: 200px;
+        }
+      }
+    }
+  }
+  li {
+    font-size: 32px;
+    margin: 1em 0 1em 0.5em;
+    list-style-type: none;
+  }
+
+  .Navlink {
+    text-decoration: none !important;
+    color: inherit;
+  }
+  .Navlink:link {
+    color: red;
+  }
+  .Navlink:visited {
+    color: green;
+  }
+  .Navlink:hover {
+    color: green;
+  }
+  .Navlink:active {
+    color: yellow;
+  }
+}

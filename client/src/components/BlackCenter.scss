@@ -1,0 +1,44 @@
+@import "./../styles/General.scss";
+//DESKTOP
+
+@media only screen and (min-width: $desktop) {
+  .blackbox-content {
+    grid-column: 4 / 10;
+  }
+}
+
+//TABLET
+.blackbox {
+  height: 550px;
+  background-color: $black;
+  color: white;
+  .wrapper {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    .blackbox-content {
+      margin: 100px 0;
+      grid-column: 3 / 11;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 5em 0;
+    }
+  }
+}
+
+//MOBILE
+@media only screen and (max-width: $mobile) {
+  .blackbox {
+    height: 400px;
+    .wrapper {
+      //height: 100%;
+
+      .blackbox-content {
+        margin: 2em;
+      }
+    }
+  }
+}

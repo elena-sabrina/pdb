@@ -1,0 +1,61 @@
+@import "./../styles/General.scss";
+
+//DESKTOP
+
+@media only screen and (min-width: $desktop) {
+}
+
+//TABLET
+.title {
+  grid-column: 1 / 5;
+  grid-row: 1 / 2;
+
+  display: flex;
+  align-items: flex-end;
+  padding: 0 0 1em 0;
+}
+
+.teaser-copy {
+  grid-column: 2 / 6;
+  grid-row: 2 / 2;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 0 -20px 0;
+}
+.teaser-slider {
+  display: flex;
+  flex-direction: row;
+  grid-column: 7/11;
+  grid-row: 2/2;
+  padding: 0 0 1em 0;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+button:hover {
+  transform: scale(1.2);
+  transition: all 0.5s ease;
+}
+
+//MOBILE
+@media only screen and (max-width: $mobile) {
+  .title {
+    display: flex;
+    align-items: flex-end;
+    padding: 2em 2em 0 2em;
+  }
+  .teaser-copy {
+    display: flex;
+    align-items: flex-end;
+    padding: 2em;
+  }
+
+  .teaser-slider {
+    margin: 0 -15px 0 0;
+  }
+}

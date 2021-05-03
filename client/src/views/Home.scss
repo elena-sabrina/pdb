@@ -1,0 +1,42 @@
+/*
+.parallax {
+  perspective: 1px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.parallax__layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+}
+.parallax__layer--base {
+  transform: translateZ(0);
+}
+
+.parallax__layer--back {
+  transform: translateZ(-10px) scale(11);
+}
+
+.parallax__group {
+  position: relative;
+  height: 20vh;
+  transform-style: preserve-3d;
+}
+
+.back {
+  height: 10px;
+  //background-color: blue;
+  //opacity: 50%;
+}
+
+.base {
+  height: 100vh;
+  //border: 3px red solid;
+  //opacity: 50%;
+}
+*/

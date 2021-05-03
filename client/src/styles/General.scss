@@ -1,0 +1,213 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap");
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  cursor: url(./../styles/images/cursor-normal.svg), default;
+}
+
+$module-height: 700px;
+$grid-sides: 0 30px;
+$grid-box: 30px;
+
+$font-family: "Comfortaa", cursive;
+
+$grey: #81899b;
+$black: #2e323b;
+$yellow: #dfa612;
+$white: #fcfcfc;
+
+//-----------FONTS-----------//
+
+//DESKTOP
+
+@media only screen and (min-width: 1060px) {
+  h1 {
+    font-size: 5em;
+  }
+  h4 {
+    font-size: 1.8em;
+    line-height: 1.8em;
+    margin: 0 0 1em 0;
+  }
+  h5 {
+    font-size: 1.2em;
+    margin: 0 0 1em 0;
+  }
+  p {
+  }
+}
+
+//TABLET
+h1 {
+  font-family: $font-family;
+  font-weight: 800;
+  line-height: 1em;
+  font-size: 3em;
+  margin: 0 0 0.5em 0;
+  padding: 0;
+}
+
+h4 {
+  font-family: $font-family;
+  font-weight: 100;
+  line-height: 1.8em;
+  font-size: 1em;
+  padding: 0;
+  margin: 0 0 1em 0;
+}
+h5 {
+  font-family: $font-family;
+  font-weight: 400;
+  line-height: 1.8em;
+
+  font-size: 0.8em;
+  padding: 0;
+  margin: 0 0 1em 0;
+}
+p {
+  font-family: $font-family;
+  font-weight: 400;
+  line-height: 1.4em;
+  font-size: 1em;
+  padding: 0;
+  margin: 0 0 0.5em 0;
+}
+
+//MOBILE
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 2em;
+  }
+  h4 {
+    font-size: 0.8em;
+    line-height: 1.8em;
+    margin: 0 0 1em 0;
+  }
+  h5 {
+    font-size: 0.6em;
+    margin: 0 0 1em 0;
+  }
+}
+
+//-----------GRID SETUP-----------//
+
+$desktop: 1060px;
+$mobile: 600px;
+
+//DESKTOP
+
+@media only screen and (min-width: $desktop) {
+  .container {
+    margin: 10vh;
+    .wrapper {
+      max-height: 800px;
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-gap: 20px;
+      grid-auto-rows: minmax(100px, 1fr);
+    }
+  }
+}
+
+//TABLET
+.container {
+  margin: 0 0 3em 0;
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 20px;
+    grid-auto-rows: minmax(100px, 1fr);
+    margin: 0 10vh;
+  }
+}
+
+//MOBILE
+@media only screen and (max-width: $mobile) {
+  .container {
+    margin: 1em 0;
+    .wrapper {
+      display: grid;
+      display: flex;
+      flex-direction: column-reverse;
+
+      grid-gap: 30px;
+
+      margin: 0;
+    }
+  }
+}
+
+//-----------OLD-----------//
+
+@mixin grid-box {
+  padding: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+@mixin grid-hero {
+  padding: 30px;
+  margin: 0 auto;
+}
+
+@mixin center-content {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@mixin h1-style {
+  font-family: $font-family;
+  font-weight: 500;
+  line-height: 1em;
+  font-size: 4.5em;
+}
+
+@mixin h2-style {
+  font-family: $font-family;
+  font-weight: 200;
+  line-height: 1em;
+  font-size: 3em;
+}
+@mixin h3-style {
+  font-family: $font-family;
+  font-weight: 200;
+  line-height: 1em;
+  font-size: 2em;
+}
+
+@mixin h4-style {
+  font-family: $font-family;
+  font-weight: 100;
+  line-height: 1em;
+  font-size: 1.2em;
+}
+
+@mixin p-style {
+  font-family: $font-family;
+  font-weight: 200;
+  line-height: 1.4em;
+  font-size: 1em;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  box-sizing: border-box;
+  margin: 0 0;
+  padding: 0;
+  //background-color: rgb(224, 224, 224);
+  max-width: 100%;
+  overflow-x: hidden;
+  font-family: $font-family;
+}
+
+.Scroll {
+  border: 1px solid black;
+  width: 600px;
+  height: 100px;
+  overflow: scroll;
+}
