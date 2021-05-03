@@ -6,11 +6,19 @@ const createError = require('http-errors');
 const logger = require('morgan');
 const serveFavicon = require('serve-favicon');
 const baseRouter = require('./routes/index');
+const cors = require('cors');
+
 
 const app = express();
 
 app.use(serveFavicon(path.join(__dirname, 'public/images', 'favicon.ico')));
 app.use(logger('dev'));
+app.use(
+  cors({
+    origin: (process.env.ALLOWED_CORS_ORIGINS || '').split(','),
+    credentials: true
+  })
+);
 app.use(express.json());
 
 app.use('/', baseRouter);
