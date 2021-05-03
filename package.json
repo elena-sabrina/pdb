@@ -4,17 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/elena-sabrina/surfskate.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/elena-sabrina/surfskate/issues"
-  },
-  "homepage": "https://github.com/elena-sabrina/surfskate#readme"
+    "start": "cd server && npm run start",
+    "prepare": "cd server && npm i"
+  }
 }
