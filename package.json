@@ -6,5 +6,8 @@
   "scripts": {
     "start": "cd server && npm run start",
     "prepare": "cd server && npm i"
+  },
+  "dependencies": {
+    "react-scroll-manager": "^1.0.3"
   }
 }
