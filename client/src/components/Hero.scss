@@ -27,7 +27,7 @@
   display: flex;
   align-items: flex-end;
   text-align: left;
-  padding: 0 0 10em 0;
+  padding: 0 0 16em 0;
 }
 
 .video {
@@ -48,6 +48,11 @@
     width: 100%;
     object-fit: cover;
   }
+}
+
+.Scroll {
+  height: 1000px;
+  overflow: scroll;
 }
 
 //MOBILE

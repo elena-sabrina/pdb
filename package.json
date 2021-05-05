@@ -8,6 +8,7 @@
     "prepare": "cd server && npm i"
   },
   "dependencies": {
-    "react-scroll-manager": "^1.0.3"
+    "react-scroll-manager": "^1.0.3",
+    "scrollmagic": "^2.0.8"
   }
 }

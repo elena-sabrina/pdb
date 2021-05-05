@@ -1,13 +1,40 @@
 import React, { Component } from "react";
 
-
+import testvideo from "./../styles/images/scrollvideo/testvideo.mp4";
 import image1 from "./../styles/images/scrollvideo/image1.png";
+
 import "./Hero.scss";
 import "./HeroAnimations.scss";
 
 class Hero extends Component {
-  state = {
-    scrollpos: ""
+  constructor(props) {
+    super(props);
+    this.myRef = React.createRef();
+    this.state = {
+      scrollTop: "1"
+    };
+  }
+
+  handleVideoMounted = (video) => {
+    console.log("handleVideoMounted mounted");
+    if (video !== null) {
+      video.currentTime = this.state.scrollTop;
+    }
+    console.log("video", video);
+  };
+
+  handleVideoScroll = (event) => {
+    const scrollTop = this.myRef.current.scrollTop / 100;
+    console.log(` ${scrollTop}`);
+    this.setState({
+      scrollTop: scrollTop
+    });
+    this.RemountVideo();
+  };
+
+  RemountVideo = () => {
+    let video = document.getElementById("video");
+    this.handleVideoMounted(video);
   };
 
   /*componentDidMount(event) {
@@ -19,8 +46,8 @@ class Hero extends Component {
     });
     console.log(this.state.scrollpos);
   }*/
-
-  /*handleScroll(update, event) {
+  /*
+  handleScroll(update, event) {
     const intro = document.querySelector(".intro");
 
     const controller = new ScrollMagic.Controller();
@@ -33,19 +60,21 @@ class Hero extends Component {
       .addIndicators()
       .setPin(intro)
       .addTo(controller);
-  }*/
-
+  }
+*/
   render() {
     return (
       <div
-        className='container hero base parallax__layer parallax__layer--base'
+        className='Scroll'
+        ref={this.myRef}
         onScroll={this.handleVideoScroll}
+        className='container hero base parallax__layer parallax__layer--base'
       >
         <div className='wrapper'>
           <div className='hero-copy'>
             <div>
               <h1>
-                PDB <br /> Surfskates
+                PDB <br /> Surfskates {this.state.scrollTop}
               </h1>
               <p>
                 Now you can develop your surfing skills in and out of the water.
@@ -54,7 +83,14 @@ class Hero extends Component {
             </div>
           </div>
           <div className='video intro'>
-            <img src={image1} alt='logo' />
+            <video
+              loop
+              autoPlay
+              muted
+              id='video'
+              src={testvideo}
+              ref={this.handleVideoMounted}
+            />
           </div>
         </div>
         <script

@@ -44,39 +44,19 @@ class Scrolltest extends Component {
         <h1>hello</h1>
 
         <video
-          id='video'
-          src={testvideo}
           width='1200'
           height='300'
-          controls='controls'
-          //autoplay='true'
-          autoPlay={true}
+          loop
+          muted
+          id='video'
+          src={testvideo}
           ref={this.handleVideoMounted}
         />
         <p>
           This demonstrates how to get the scrollTop position within a
           scrollable react component. ScrollTop is {this.state.scrollTop}
         </p>
-        <p>
-          This demonstrates how to get the scrollTop position within a
-          scrollable react component. ScrollTop is {this.state.scrollTop}
-        </p>
-        <p>
-          This demonstrates how to get the scrollTop position within a
-          scrollable react component. ScrollTop is {this.state.scrollTop}
-        </p>
-        <p>
-          This demonstrates how to get the scrollTop position within a
-          scrollable react component. ScrollTop is {this.state.scrollTop}
-        </p>
-        <p>
-          This demonstrates how to get the scrollTop position within a
-          scrollable react component. ScrollTop is {this.state.scrollTop}
-        </p>
-        <p>
-          This demonstrates how to get the scrollTop position within a
-          scrollable react component. ScrollTop is {this.state.scrollTop}
-        </p>
+
         <div className='video intro'>
           {(this.state.scrollTop === "1" && (
             <img src={image1} alt='logo' />
