@@ -46,12 +46,12 @@ class Home extends Component {
     return (
       <div>
         <div class='parallax'>
-          <div class='parallax__group'>
-            <div
-              ref={this.myRef}
-              onScroll={this.handleVideoScroll}
-              className='Scroll container hero base parallax__layer parallax__layer--base'
-            >
+          <div
+            class=' Scroll parallax__group'
+            ref={this.myRef}
+            onScroll={this.handleVideoScroll}
+          >
+            <div className=' container hero base parallax__layer parallax__layer--base'>
               <div className='wrapper'>
                 <div className='hero-copy'>
                   <div>
@@ -80,7 +80,6 @@ class Home extends Component {
             <BlackCenter />
           </div>
         </div>
-
         <TrucksSpecial />
         <TeaserTwo />
         <Slider />

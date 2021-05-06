@@ -8,9 +8,7 @@ class TrucksSpecial extends Component {
       <div className='container'>
         <div className='wrapper'>
           <div className='title'>
-            <div>
-              <h2>Trucks</h2>
-            </div>
+            <h2>Trucks</h2>
           </div>
 
           <div className='teaser-video'>

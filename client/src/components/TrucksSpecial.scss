@@ -20,8 +20,11 @@
   flex-direction: row;
   justify-content: center;
   grid-column: 2/12;
-  grid-row: 2/2;
+  grid-row: 2/4;
   padding: 0 0 1em 0;
+  img {
+    height: 300px;
+  }
 }
 
 button {
