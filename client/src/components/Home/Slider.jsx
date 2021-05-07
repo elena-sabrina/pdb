@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 
-import wheel from "./../styles/images/wheel.png";
-import wheel1 from "./../styles/images/wheel1.jpg";
-import wheel2 from "./../styles/images/wheel2.jpg";
-import arrowright from "./../styles/images/arrow-right.svg";
-import arrowleft from "./../styles/images/arrow-left.svg";
+import wheel from "./../../styles/images/wheel.png";
+import wheel1 from "./../../styles/images/wheel1.jpg";
+import wheel2 from "./../../styles/images/wheel2.jpg";
+import arrowright from "./../../styles/images/arrow-right.svg";
+import arrowleft from "./../../styles/images/arrow-left.svg";
 import "./Slider.scss";
 
 class Slider extends Component {

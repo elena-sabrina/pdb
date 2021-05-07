@@ -3,14 +3,14 @@ import React, { Component } from "react";
 import testvideo from "./../styles/images/scrollvideo/testvideo.mp4";
 import image1 from "./../styles/images/scrollvideo/image1.png";
 
-import "./../components/Hero.scss";
-import "./../components/HeroAnimations.scss";
+import "./../components/Home/Hero.scss";
+import "./../components/Home/HeroAnimations.scss";
 
-import BlackCenter from "./../components/BlackCenter";
-import TrucksSpecial from "./../components/TrucksSpecial";
-import TeaserTwo from "./../components/TeaserTwo";
-import Slider from "../components/Slider";
-import TeaserButton from "../components/TeaserButton";
+import BlackCenter from "./../components/Home/BlackCenter";
+import TrucksSpecial from "./../components/Home/TrucksSpecial";
+import TeaserTwo from "./../components/Home/TeaserTwo";
+import Slider from "../components/Home/Slider";
+import TeaserButton from "../components/Home/TeaserButton";
 
 import "./Home.scss";
 

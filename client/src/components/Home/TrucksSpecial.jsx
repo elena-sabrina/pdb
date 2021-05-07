@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import truckplaceholder from "./../styles/images/truckplaceholder.png";
+import truckplaceholder from "./../../styles/images/truckplaceholder.png";
 import "./TrucksSpecial.scss";
 
 class TrucksSpecial extends Component {

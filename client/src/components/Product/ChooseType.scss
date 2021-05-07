@@ -1,0 +1,74 @@
+@import "./../../styles/General.scss";
+
+//DESKTOP
+
+@media only screen and (min-width: $desktop) {
+  .choose-type-teaser-two {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+//TABLET
+.choose-type-title {
+  grid-column: 1 / 5;
+  grid-row: 1 / 2;
+
+  display: flex;
+  align-items: flex-end;
+  padding: 0 0 1em 0;
+}
+
+.choose-type-teaser {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 0 1em 0;
+  }
+  
+  .type-one {
+    grid-column: 2 / 6;
+    grid-row: 2 / 5;
+  }
+  .type-two {
+    grid-column: 7/11;
+    grid-row: 2/5;
+  }
+.choose-type-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 20em;
+
+  img {
+    height: 100%;
+  }
+
+  h4 {
+    margin: 1em 0 0 0;
+  }
+}
+
+img {
+  height: 100%;
+}
+
+//MOBILE
+@media only screen and (max-width: $mobile) {
+  .choose-type-title {
+    display: flex;
+    align-items: flex-end;
+    padding: 2em 2em 0 2em;
+  }
+  .choose-type-teaser-one {
+    display: flex;
+    align-items: flex-end;
+    padding: 2em;
+  }
+
+  .choose-type-teaser-two {
+    margin: 0 -15px 0 0;
+  }
+}

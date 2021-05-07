@@ -1,19 +1,10 @@
-
-
-
 import React, { Component } from "react";
 
 import testvideo from "./../styles/images/scrollvideo/testvideo.mp4";
 import image1 from "./../styles/images/scrollvideo/image1.png";
 
-import "./../components/Hero.scss";
-import "./../components/HeroAnimations.scss";
-
-import BlackCenter from "./../components/BlackCenter";
-import TrucksSpecial from "./../components/TrucksSpecial";
-import TeaserTwo from "./../components/TeaserTwo";
-import Slider from "../components/Slider";
-import TeaserButton from "../components/TeaserButton";
+import "./../components/Home/Hero.scss";
+import "./../components/Home/HeroAnimations.scss";
 
 import "./Home.scss";
 
@@ -105,19 +96,12 @@ class Scrolltest extends Component {
                   </div>
                 </div>
               </div>
-              <BlackCenter />
             </div>
           </div>
         )) || <p>No currentFrame</p>}
-
-        <TrucksSpecial />
-        <TeaserTwo />
-        <Slider />
-        <TeaserButton />
       </div>
     );
   }
 }
 
 export default Scrolltest;
-

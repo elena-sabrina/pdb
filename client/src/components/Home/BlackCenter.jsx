@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 import "./BlackCenter.scss";
-import "./../views/Home.scss";
+import "./../../views/Home.scss";
 
 class BlackCenter extends Component {
   render() {
