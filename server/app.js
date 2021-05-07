@@ -8,6 +8,8 @@ const serveFavicon = require('serve-favicon');
 const baseRouter = require('./routes/index');
 const cors = require('cors');
 
+const { createCanvas, loadImage } = require('canvas');
+const canvas = createCanvas(200, 200);
 
 const app = express();
 

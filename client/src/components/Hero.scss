@@ -51,7 +51,7 @@
 }
 
 .Scroll {
-  height: 700px;
+  height: 690px;
   overflow: scroll;
 
   margin: 0;
@@ -63,7 +63,7 @@
   .hero-copy {
     display: flex;
     align-items: flex-end;
-    padding: 2em 2em 2em 2em;
+    padding: 6em 2em 4em 2em;
   }
 
   .intro {
@@ -74,8 +74,11 @@
       width: 100%;
     }
     video {
-      max-height: 400px;
+      height: 600px;
       width: 100%;
     }
+  }
+  .Scroll {
+    height: 690px;
   }
 }

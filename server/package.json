@@ -9,6 +9,7 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "canvas": "^2.7.0",
     "cors": "^2.8.5",
     "debug": "^4.3.1",
     "dotenv": "^8.2.0",

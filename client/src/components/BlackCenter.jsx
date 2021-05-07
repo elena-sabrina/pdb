@@ -9,10 +9,11 @@ class BlackCenter extends Component {
       <div className='container blackbox back parallax__layer parallax__layer--back'>
         <div className='wrapper'>
           <div className='blackbox-content'>
-            <h5>simulate waves</h5>
+            <h5>Skate your wave.</h5>
             <h4>
-              Our surfskates are designed to simulate the movements you make and
-              the feeling you get while surfing.
+              We design your pdb surfskate to emulate your surf. Improve. Get
+              that infinite riding thrill.
+              <h5>Improve your surf.</h5>
             </h4>
           </div>
         </div>

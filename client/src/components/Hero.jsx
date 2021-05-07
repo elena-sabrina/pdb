@@ -77,8 +77,8 @@ class Hero extends Component {
                 PDB <br /> Surfskates {this.state.scrollTop}
               </h1>
               <p>
-                Now you can develop your surfing skills in and out of the water.
-                Improve your turns and learn to generate ...
+                Develop your surf skills on land. Carve, trim, cutbacks, snaps:
+                Improve your technique. Shred the wave you create.
               </p>
             </div>
           </div>
@@ -93,23 +93,6 @@ class Hero extends Component {
             />
           </div>
         </div>
-        <script
-          src='https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/jquery.ScrollMagic.min.js'
-          integrity='sha512-RoCOXSeYXosX4PjvRhUz0X+pmdhOJJkbjYZzmZ9dS1Iy9E/WnkTqMy+LVkPX3BV0ZgSFB2AYQKfi6ZKdNdXJnQ=='
-          crossorigin='anonymous'
-        ></script>
-
-        <script
-          src='https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.min.js'
-          integrity='sha512-5/OHwmQzDSBS0Ous4/hlYoWLHd06/d2r7LdKZQVBXOA6PvOqWVXtdboiLTU7lQTGyVoKVTNkwi0ol4gHGlw5ww=='
-          crossorigin='anonymous'
-        ></script>
-
-        <script
-          src='https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js'
-          integrity='sha512-DkPsH9LzNzZaZjCszwKrooKwgjArJDiEjA5tTgr3YX4E6TYv93ICS8T41yFHJnnSmGpnf0Mvb5NhScYbwvhn2w=='
-          crossorigin='anonymous'
-        ></script>
       </div>
     );
   }

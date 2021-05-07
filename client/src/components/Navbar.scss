@@ -27,12 +27,12 @@
   animation: fadeinNav 1s;
 
   .Navbar {
-    background-color: $white;
+    background-color: white;
 
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color: $white;
+    background-color: white;
     align-items: center;
     .logo {
       display: block;
@@ -80,6 +80,10 @@
   .hamburger:hover {
     transform: scale(1.08);
     transition: all 0.5s ease;
+   /* .linetwo {
+      width: 2rem;
+      color: red;
+    }*/
   }
 
   .nav-links {

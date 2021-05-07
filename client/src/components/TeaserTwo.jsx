@@ -16,8 +16,8 @@ class TeaserTwo extends Component {
             <div>
               <h4>ECHO</h4>
               <p>
-                Our hybrid surf and skate truck. Enhanced pumping and turning
-                while maintaining a more traditional skating feel.
+                Your hybrid PDB. Enhance your pumping and turns with a classic
+                skateboard feeling.
               </p>
             </div>
           </div>
@@ -26,8 +26,8 @@ class TeaserTwo extends Component {
             <h4>ULU</h4>
 
             <p>
-              Our advanced model that provides the most surf-like feeling
-              available. Develop aggressive turns and cut backs.
+              Your advanced PDB. Perform radical turns and maneuvers with the
+              most surf-like feeling.
             </p>
           </div>
         </div>
