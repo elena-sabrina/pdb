@@ -9,11 +9,21 @@ import Order from "../components/Product/Order";
 //import "./Home.scss";
 
 class Product extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      surfskate: "asdf"
+    };
+
+    //this.delta = this.delta.bind(this);
+  }
+
   render() {
     return (
       <div>
         <Header />
-        <ChooseType />
+        <ChooseType surfskates={this.state.surfskate} />
         <ChooseWheels />
         <Summary />
         <Order />

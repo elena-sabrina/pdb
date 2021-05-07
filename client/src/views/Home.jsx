@@ -49,8 +49,6 @@ class Home extends Component {
 
   //IMAGE SLIDER
 
-  handleImageChange;
-
   handleImageChange = async ({ image }) => {
     console.log("lifting up B running");
     console.log("dare", image);

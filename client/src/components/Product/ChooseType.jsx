@@ -6,6 +6,23 @@ import ULU from "./../../styles/images/ULU.png";
 import "./ChooseType.scss";
 
 class ChooseType extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      surfskate_type: ""
+    };
+  }
+
+  handleButtonClickEcho = () => {
+    this.setState({ surfskate_type: "echo" });
+    console.log(this.state.surfskate_type);
+  };
+
+  handleButtonClickUlu = () => {
+    this.setState({ surfskate_type: "ulu" });
+    console.log(this.state.surfskate_type);
+  };
+
   render() {
     return (
       <div className='container'>
@@ -16,21 +33,27 @@ class ChooseType extends Component {
               <p>Choose ...</p>
             </div>
           </div>
-          <div className='choose-type-teaser type-one'>
+          <button
+            className='choose-type-teaser type-one'
+            onClick={this.handleButtonClickEcho}
+          >
             <div className='choose-type-box'>
               <img src={ECHO} alt='surfskateimage' />
               <h4>ECHO</h4>
               <p>Your hybrid PDB.</p>
             </div>
-          </div>
+          </button>
 
-          <div className='choose-type-teaser type-two'>
+          <button
+            className='choose-type-teaser type-two'
+            onClick={this.handleButtonClickUlu}
+          >
             <div className='choose-type-box'>
               <img src={ULU} alt='surfskateimage' />
               <h4>ULU</h4>
               <p>Your advanced PDB.</p>
             </div>
-          </div>
+          </button>
         </div>
       </div>
     );

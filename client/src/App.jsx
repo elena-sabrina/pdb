@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import "./styles/main.css";
 
@@ -15,24 +16,6 @@ import Contact from "./views/Contact";
 import Scrolltest from "./views/Scrolltest";
 
 export class App extends Component {
-  /* constructor(props) {
-    super(props);
-    this.myRef = React.createRef();
-    this.state = {
-      scrollTop: "1"
-    };
-  }
-
-  handleVideoScroll = (event) => {
-    const scrollY = window.scrollY; //Don't get confused by what's scrolling - It's not the window
-    const scrollX = window.scrollX;
-    //const scrollRef = this.myRef.current;
-    const scrollTop = this.myRef.current.focus;
-    console.log(` ${scrollY}-${scrollX}-${scrollTop}`);
-    this.setState({
-      scrollTop: scrollTop
-    });
-  };*/
   render() {
     return (
       <BrowserRouter className='App'>
@@ -41,7 +24,11 @@ export class App extends Component {
 
           <Switch>
             <Route path='/' component={Home} exact />
-            <Route path='/product' component={Product} exact />
+            <Route
+              path='/product'
+              render={(props) => <Product {...props} />}
+              exact
+            />
             <Route path='/product/checkout' component={Checkout} exact />
             <Route
               path='/product/checkout/confirmation'
