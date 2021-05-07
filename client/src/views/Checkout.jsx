@@ -1,10 +1,12 @@
 import React, { Component } from "react";
 
+import CheckoutHeader from "../components/Checkout/CheckoutHeader";
+
 class Checkout extends Component {
   render() {
     return (
       <div>
-          <h1>Checkout</h1>
+        <CheckoutHeader />
       </div>
     );
   }
