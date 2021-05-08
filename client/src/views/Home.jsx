@@ -20,7 +20,7 @@ class Home extends Component {
     this.myRef = React.createRef();
     this.state = {
       scrollTop: "1",
-      image: 1
+      image: 0
     };
   }
 

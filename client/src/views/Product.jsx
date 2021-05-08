@@ -15,15 +15,16 @@ class Product extends Component {
     this.state = {
       surfskate: "asdf"
     };
-
-    //this.delta = this.delta.bind(this);
   }
 
   render() {
     return (
       <div>
         <Header />
-        <ChooseType surfskates={this.state.surfskate} />
+        <ChooseType
+          type={this.props.type}
+          onTypeHasChanged={this.props.onTypeChange}
+        />
         <ChooseWheels />
         <Summary />
         <Order />

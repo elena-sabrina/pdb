@@ -14,13 +14,13 @@ class ChooseType extends Component {
   }
 
   handleButtonClickEcho = () => {
-    this.setState({ surfskate_type: "echo" });
-    console.log(this.state.surfskate_type);
+    const type = "echo";
+    this.props.onTypeHasChanged({ type });
   };
 
   handleButtonClickUlu = () => {
-    this.setState({ surfskate_type: "ulu" });
-    console.log(this.state.surfskate_type);
+    const type = "ulu";
+    this.props.onTypeHasChanged({ type });
   };
 
   render() {

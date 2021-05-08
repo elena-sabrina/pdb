@@ -34,19 +34,20 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
   overflow: hidden;
 
   .slideshow-container {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
 
     width: 100%;
 
     .mySlides {
       display: flex;
       flex-direction: row;
+      align-items: center;
       img {
         width: 200px;
         height: auto;
@@ -59,6 +60,7 @@ button {
   background-color: transparent;
   border: none;
   outline: none;
+  height: 4em;
 }
 button:hover {
   transform: scale(1.2);
