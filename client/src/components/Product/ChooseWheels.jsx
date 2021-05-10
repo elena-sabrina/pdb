@@ -5,7 +5,28 @@ import wheel from "./../../styles/images/wheel.png";
 import "./ChooseWheels.scss";
 
 class ChooseType extends Component {
+  constructor(props) {
+    super(props);
+    console.log("chooseWheels props", this.props);
+    this.state = {
+      new_surfskate: {
+        wheel: "none"
+      }
+    };
+  }
+
+  handleWheelChange = (wheel) => {
+    this.setState({
+      new_surfskate: {
+        tywheelpe: wheel
+      }
+    });
+    console.log(wheel);
+    this.props.onWheelHasChanged({ wheel });
+  };
+
   render() {
+    const wheelcolor = this.state.new_surfskate.wheel;
     return (
       <div className='container'>
         <div className='wrapper'>
@@ -15,37 +36,50 @@ class ChooseType extends Component {
               <p>Choose ...</p>
             </div>
           </div>
-          <div className='choose-wheels-teaser wheel-one'>
+
+          <button
+            className='choose-wheels-teaser wheel-one'
+            onClick={() => this.handleWheelChange("white")}
+          >
             <div className='choose-wheels-box'>
               <img src={wheel} alt='surfskateimage' />
 
               <p>White</p>
             </div>
-          </div>
+          </button>
 
-          <div className='choose-wheels-teaser wheel-two'>
+          <button
+            className='choose-wheels-teaser wheel-two'
+            onClick={() => this.handleWheelChange("blue")}
+          >
             <div className='choose-wheels-box'>
               <img src={wheel} alt='surfskateimage' />
 
               <p>Blue</p>
             </div>
-          </div>
+          </button>
 
-          <div className='choose-wheels-teaser wheel-three'>
+          <button
+            className='choose-wheels-teaser wheel-three'
+            onClick={() => this.handleWheelChange("green")}
+          >
             <div className='choose-wheels-box'>
               <img src={wheel} alt='surfskateimage' />
 
               <p>Green</p>
             </div>
-          </div>
+          </button>
 
-          <div className='choose-wheels-teaser wheel-four'>
+          <button
+            className='choose-wheels-teaser wheel-four'
+            onClick={() => this.handleWheelChange("red")}
+          >
             <div className='choose-wheels-box'>
               <img src={wheel} alt='surfskateimage' />
 
               <p>Red</p>
             </div>
-          </div>
+          </button>
         </div>
       </div>
     );

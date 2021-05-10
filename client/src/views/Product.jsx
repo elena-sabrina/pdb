@@ -11,10 +11,10 @@ import Order from "../components/Product/Order";
 class Product extends Component {
   constructor(props) {
     super(props);
-
-    this.state = {
-      surfskate: "asdf"
-    };
+    console.log("product props", this.props);
+    //this.state = {
+    //  surfskate: "asdf"
+    // };
   }
 
   render() {
@@ -25,8 +25,11 @@ class Product extends Component {
           type={this.props.type}
           onTypeHasChanged={this.props.onTypeChange}
         />
-        <ChooseWheels />
-        <Summary />
+        <ChooseWheels
+          wheel={this.props.wheel}
+          onWheelHasChanged={this.props.onWheelChange}
+        />
+        <Summary type={this.props.type} wheel={this.props.wheel} />
         <Order />
       </div>
     );

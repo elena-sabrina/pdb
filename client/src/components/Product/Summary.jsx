@@ -3,6 +3,13 @@ import React, { Component } from "react";
 import "./Summary.scss";
 
 class Summary extends Component {
+  constructor(props) {
+    super(props);
+    console.log("summary props:", this.props);
+    //this.state = {
+    //  surfskate: "asdf"
+    // };
+  }
   render() {
     return (
       <div className='container'>
@@ -10,11 +17,11 @@ class Summary extends Component {
           <div className='summary-title'>
             <div>
               <h2>Summary</h2>
+              <p>Wheels: {this.props.wheel}</p>
               <p>Please check your configuration and add it to your order.</p>
             </div>
           </div>
           <div className='summary'>
-          
             <table>
               <tr>
                 <td>Type: ECHO</td>

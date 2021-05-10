@@ -19,12 +19,12 @@ export class App extends Component {
   constructor(props) {
     super(props);
 
-    console.log("props A", this.props.new_surfskate, this.props.new_order);
+    console.log("App props", this.props);
 
     this.state = {
       new_surfskate: {
         type: null,
-        type: null,
+        type_price: null,
         wheels: null,
         wheels_price: null
       },
@@ -46,16 +46,29 @@ export class App extends Component {
         type: type
       }
     });
+    console.log(this.state.new_surfskate);
+    //this.loadDare();
+  };
 
+  handleWheelChangeSubmission = async ({ wheel }) => {
+    console.log("lifting up B running");
+    console.log("wheel", wheel);
+    this.setState({
+      new_surfskate: {
+        wheel: wheel
+      }
+    });
     console.log(this.state.new_surfskate);
     //this.loadDare();
   };
 
   render() {
+    const { type } = this.state.new_surfskate;
     return (
       <BrowserRouter className='App'>
         <>
           <Navbar />
+          <p> type: {type}</p>
 
           <Switch>
             <Route path='/' component={Home} exact />
@@ -64,8 +77,11 @@ export class App extends Component {
               render={(props) => (
                 <Product
                   {...props}
-                  type={this.state.type}
-                  onStatusChange={this.handleTypeChangeSubmission}
+                  type={this.state.new_surfskate.type}
+                  wheel={this.state.new_surfskate.wheel}
+                  message={"hello"}
+                  onTypeChange={this.handleTypeChangeSubmission}
+                  onWheelChange={this.handleWheelChangeSubmission}
                 />
               )}
               exact
