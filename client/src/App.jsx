@@ -23,25 +23,15 @@ export class App extends Component {
 
     this.state = {
       newsurfskate: {
-        type: null,
-        type_price: null,
-        wheel: null,
-        wheel_price: null
-      },
-      neworder: {
-        surfskates: [],
-        price: null,
-        client: null,
-        adress: null,
-        email: null
+        type: "none",
+        wheel: "none",
+        name: "",
+        email: "",
+        adress: ""
       }
     };
   }
 
-  componentDidMount() {
-    console.log("app mounted");
-    console.log(this.state.newsurfskate);
-  }
   /*
   handleTypeChangeSubmission = async (type) => {
     console.log("App handeltypechangesub");
@@ -67,17 +57,24 @@ export class App extends Component {
     console.log("App new state wheel", this.state.newsurfskate);
   };*/
 
-  handleConfigureChangeSubmission = async (type, wheel) => {
-    console.log("App handlewheelchangesub");
-    console.log(this.state.newsurfskate.type);
-
+  handleConfigureChangeSubmission = async (
+    type,
+    wheel,
+    name,
+    email,
+    adress
+  ) => {
     this.setState({
       newsurfskate: {
         type: type,
-        wheel: wheel
+        wheel: wheel,
+        name: name,
+        email: email,
+        adress: adress
       }
     });
     console.log("App new state configure", this.state.newsurfskate);
+    window.location.href = `/product/confirmation/${type}/${wheel}/${name}/${email}/${adress}`;
   };
 
   render() {
@@ -95,15 +92,32 @@ export class App extends Component {
                   {...props}
                   type={this.state.newsurfskate.type}
                   wheel={this.state.newsurfskate.wheel}
-                  newsurfskate={this.state.newsurfskate.newsurfskate}
+                  name={this.state.newsurfskate.name}
+                  adress={this.state.newsurfskate.adress}
+                  email={this.state.newsurfskate.email}
                   onConfigureChange={this.handleConfigureChangeSubmission}
                 />
               )}
               exact
             />
-            <Route path='/product/checkout' component={Checkout} exact />
+            <Route
+              path='/product/checkout'
+              render={(props) => (
+                <Checkout
+                  {...props}
+                  surfskate={this.state.newsurfskate}
+                  message={"surprise surprise"}
+                />
+              )}
+              exact
+            />
             <Route
               path='/product/checkout/confirmation'
+              component={Confirmation}
+              exact
+            />
+            <Route
+              path='/product/checkout/confirmation/:id/:id/:id/:id/:id'
               component={Confirmation}
               exact
             />

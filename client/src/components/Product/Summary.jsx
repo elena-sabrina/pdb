@@ -18,8 +18,8 @@ class Summary extends Component {
         <div className='wrapper'>
           <div className='summary-title'>
             <div>
-              <h2>Summary</h2>
-              
+              <h2>Check your order</h2>
+
               <p>...</p>
             </div>
           </div>

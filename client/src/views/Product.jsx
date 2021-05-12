@@ -20,14 +20,8 @@ class Product extends Component {
 
   /*
 
-  <ChooseType
-          type={this.props.type}
-          onTypeHasChanged={this.props.onTypeChange}
-        />
-        <ChooseWheels
-          wheel={this.props.wheel}
-          onWheelHasChanged={this.props.onWheelChange}
-        />*/
+   <Order type={this.props.type} wheel={this.props.wheel} />
+        */
 
   render() {
     return (
@@ -35,11 +29,12 @@ class Product extends Component {
         <Header />
         <Configure
           type={this.props.type}
-          onConfigureHasChanged={this.props.onConfigureChange}
           wheel={this.props.wheel}
+          name={this.props.name}
+          adress={this.props.adress}
+          email={this.props.email}
+          onConfigureHasChanged={this.props.onConfigureChange}
         />
-
-        <Order type={this.props.type} wheel={this.props.wheel} />
       </div>
     );
   }
