@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 
 import Header from "../components/Product/Header";
+import Configure from "../components/Product/Configure";
 import ChooseType from "../components/Product/ChooseType";
 import ChooseWheels from "../components/Product/ChooseWheels";
 import Summary from "../components/Product/Summary";
@@ -17,20 +18,28 @@ class Product extends Component {
     // };
   }
 
-  render() {
-    return (
-      <div>
-        <Header />
-        <ChooseType
+  /*
+
+  <ChooseType
           type={this.props.type}
           onTypeHasChanged={this.props.onTypeChange}
         />
         <ChooseWheels
           wheel={this.props.wheel}
           onWheelHasChanged={this.props.onWheelChange}
+        />*/
+
+  render() {
+    return (
+      <div>
+        <Header />
+        <Configure
+          type={this.props.type}
+          onConfigureHasChanged={this.props.onConfigureChange}
+          wheel={this.props.wheel}
         />
-        <Summary type={this.props.type} wheel={this.props.wheel} />
-        <Order />
+
+        <Order type={this.props.type} wheel={this.props.wheel} />
       </div>
     );
   }

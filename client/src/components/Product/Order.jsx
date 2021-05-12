@@ -3,14 +3,26 @@ import React, { Component } from "react";
 import "./Order.scss";
 
 class Order extends Component {
+  constructor(props) {
+    super(props);
+    console.log("order props:", this.props);
+    //this.state = {
+    //  surfskate: "asdf"
+    // };
+  }
   render() {
+    const wheelprops = this.props.wheel;
+    const typeprops = this.props.type;
     return (
       <div className='container'>
         <div className='wrapper'>
           <div className='order-title'>
             <div>
               <h2>Order</h2>
-              <p>...</p>
+              <p>
+                {typeprops}
+                {wheelprops}
+              </p>
             </div>
           </div>
           <div className='order'>

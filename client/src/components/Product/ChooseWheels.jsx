@@ -9,7 +9,7 @@ class ChooseType extends Component {
     super(props);
     console.log("chooseWheels props", this.props);
     this.state = {
-      new_surfskate: {
+      newsurfskate: {
         wheel: "none"
       }
     };
@@ -17,23 +17,27 @@ class ChooseType extends Component {
 
   handleWheelChange = (wheel) => {
     this.setState({
-      new_surfskate: {
-        tywheelpe: wheel
+      newsurfskate: {
+        wheel: wheel
       }
     });
-    console.log(wheel);
-    this.props.onWheelHasChanged({ wheel });
+
+    this.props.onWheelHasChanged(wheel);
   };
 
   render() {
-    const wheelcolor = this.state.new_surfskate.wheel;
+    const wheelprops = this.props.wheel;
+    const wheelstate = this.state.newsurfskate.wheel;
+
     return (
       <div className='container'>
         <div className='wrapper'>
           <div className='choose-wheels-title'>
             <div>
               <h2>Wheels</h2>
-              <p>Choose ...</p>
+              Choose <br />
+              Props:...{wheelprops} <br />
+              State:...{wheelstate}
             </div>
           </div>
 
@@ -41,44 +45,84 @@ class ChooseType extends Component {
             className='choose-wheels-teaser wheel-one'
             onClick={() => this.handleWheelChange("white")}
           >
-            <div className='choose-wheels-box'>
-              <img src={wheel} alt='surfskateimage' />
-
-              <p>White</p>
-            </div>
+            {(wheelprops === "white" && (
+              <div className='selected'>
+                <div className='choose-wheels-box'>
+                  <img src={wheel} alt='surfskateimage' />
+                  <p>White</p>
+                </div>
+              </div>
+            )) || (
+              <div className='not-selected'>
+                <div className='choose-wheels-box'>
+                  <img src={wheel} alt='surfskateimage' />
+                  <p>White</p>
+                </div>
+              </div>
+            )}
           </button>
 
           <button
             className='choose-wheels-teaser wheel-two'
-            onClick={() => this.handleWheelChange("blue")}
+            onClick={() => this.handleWheelChange("green")}
           >
-            <div className='choose-wheels-box'>
-              <img src={wheel} alt='surfskateimage' />
-
-              <p>Blue</p>
-            </div>
+            {(wheelprops === "green" && (
+              <div className='selected'>
+                <div className='choose-wheels-box'>
+                  <img src={wheel} alt='surfskateimage' />
+                  <p>Green</p>
+                </div>
+              </div>
+            )) || (
+              <div className='not-selected'>
+                <div className='choose-wheels-box'>
+                  <img src={wheel} alt='surfskateimage' />
+                  <p>Green</p>
+                </div>
+              </div>
+            )}
           </button>
 
           <button
             className='choose-wheels-teaser wheel-three'
-            onClick={() => this.handleWheelChange("green")}
+            onClick={() => this.handleWheelChange("red")}
           >
-            <div className='choose-wheels-box'>
-              <img src={wheel} alt='surfskateimage' />
-
-              <p>Green</p>
-            </div>
+            {(wheelprops === "red" && (
+              <div className='selected'>
+                <div className='choose-wheels-box'>
+                  <img src={wheel} alt='surfskateimage' />
+                  <p>Red</p>
+                </div>
+              </div>
+            )) || (
+              <div className='not-selected'>
+                <div className='choose-wheels-box'>
+                  <img src={wheel} alt='surfskateimage' />
+                  <p>Red</p>
+                </div>
+              </div>
+            )}
           </button>
 
           <button
             className='choose-wheels-teaser wheel-four'
-            onClick={() => this.handleWheelChange("red")}
+            onClick={() => this.handleWheelChange("black")}
           >
-            <div className='choose-wheels-box'>
-              <img src={wheel} alt='surfskateimage' />
-
-              <p>Red</p>
-            </div>
+            {(wheelprops === "black" && (
+              <div className='selected'>
+                <div className='choose-wheels-box'>
+                  <img src={wheel} alt='surfskateimage' />
+                  <p>Black</p>
+                </div>
+              </div>
+            )) || (
+              <div className='not-selected'>
+                <div className='choose-wheels-box'>
+                  <img src={wheel} alt='surfskateimage' />
+                  <p>Black</p>
+                </div>
+              </div>
+            )}
           </button>
         </div>
       </div>

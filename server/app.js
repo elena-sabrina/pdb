@@ -3,15 +3,24 @@
 const path = require('path');
 const express = require('express');
 const createError = require('http-errors');
+const connectMongo = require('connect-mongo');
+const expressSession = require('express-session');
 const logger = require('morgan');
+const mongoose = require('mongoose');
 const serveFavicon = require('serve-favicon');
+//const basicAuthenticationDeserializer = require('./middleware/basic-authentication-deserializer.js');
+//const bindUserToViewLocals = require('./middleware/bind-user-to-view-locals.js');
+
 const baseRouter = require('./routes/index');
+const productRouter = require('./routes/product');
+
 const cors = require('cors');
 
 const app = express();
 
 app.use(serveFavicon(path.join(__dirname, 'public/images', 'favicon.ico')));
 app.use(logger('dev'));
+
 app.use(
   cors({
     origin: (process.env.ALLOWED_CORS_ORIGINS || '').split(','),
@@ -20,7 +29,30 @@ app.use(
 );
 app.use(express.json());
 
+/*app.use(
+  expressSession({
+    secret: process.env.SESSION_SECRET,
+    resave: false,
+    saveUninitialized: false,
+    proxy: true, // Should allow cookie-setting with heroku proxied requests
+    cookie: {
+      maxAge: 15 * 24 * 60 * 60 * 1000,
+      httpOnly: true,
+      sameSite: process.env.NODE_ENV === 'production' ? 'none' : false, // Can be used cross-site
+      secure: process.env.NODE_ENV === 'production' // App is running on heroku
+    },
+    store: new (connectMongo(expressSession))({
+      mongooseConnection: mongoose.connection,
+      ttl: 24 * 60 * 60
+    })
+  })
+);*/
+
+//app.use(basicAuthenticationDeserializer);
+//app.use(bindUserToViewLocals);
+
 app.use('/', baseRouter);
+app.use('/product', productRouter);
 
 // Catch missing routes and forward to error handler
 app.use((req, res, next) => {

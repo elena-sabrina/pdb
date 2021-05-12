@@ -22,13 +22,13 @@ export class App extends Component {
     console.log("App props", this.props);
 
     this.state = {
-      new_surfskate: {
+      newsurfskate: {
         type: null,
         type_price: null,
-        wheels: null,
-        wheels_price: null
+        wheel: null,
+        wheel_price: null
       },
-      new_order: {
+      neworder: {
         surfskates: [],
         price: null,
         client: null,
@@ -38,37 +38,53 @@ export class App extends Component {
     };
   }
 
-  handleTypeChangeSubmission = async ({ type }) => {
-    console.log("lifting up B running");
-    console.log("type", type);
+  componentDidMount() {
+    console.log("app mounted");
+    console.log(this.state.newsurfskate);
+  }
+  /*
+  handleTypeChangeSubmission = async (type) => {
+    console.log("App handeltypechangesub");
+
     this.setState({
-      new_surfskate: {
+      newsurfskate: {
         type: type
       }
     });
-    console.log(this.state.new_surfskate);
-    //this.loadDare();
+    console.log("App new state type", this.state.newsurfskate);
   };
 
-  handleWheelChangeSubmission = async ({ wheel }) => {
-    console.log("lifting up B running");
-    console.log("wheel", wheel);
+  handleWheelChangeSubmission = async (wheel) => {
+    console.log("App handlewheelchangesub");
+    console.log(this.state.newsurfskate.type);
+
     this.setState({
-      new_surfskate: {
+      newsurfskate: {
         wheel: wheel
       }
     });
-    console.log(this.state.new_surfskate);
-    //this.loadDare();
+
+    console.log("App new state wheel", this.state.newsurfskate);
+  };*/
+
+  handleConfigureChangeSubmission = async (type, wheel) => {
+    console.log("App handlewheelchangesub");
+    console.log(this.state.newsurfskate.type);
+
+    this.setState({
+      newsurfskate: {
+        type: type,
+        wheel: wheel
+      }
+    });
+    console.log("App new state configure", this.state.newsurfskate);
   };
 
   render() {
-    const { type } = this.state.new_surfskate;
     return (
       <BrowserRouter className='App'>
         <>
           <Navbar />
-          <p> type: {type}</p>
 
           <Switch>
             <Route path='/' component={Home} exact />
@@ -77,11 +93,10 @@ export class App extends Component {
               render={(props) => (
                 <Product
                   {...props}
-                  type={this.state.new_surfskate.type}
-                  wheel={this.state.new_surfskate.wheel}
-                  message={"hello"}
-                  onTypeChange={this.handleTypeChangeSubmission}
-                  onWheelChange={this.handleWheelChangeSubmission}
+                  type={this.state.newsurfskate.type}
+                  wheel={this.state.newsurfskate.wheel}
+                  newsurfskate={this.state.newsurfskate.newsurfskate}
+                  onConfigureChange={this.handleConfigureChangeSubmission}
                 />
               )}
               exact

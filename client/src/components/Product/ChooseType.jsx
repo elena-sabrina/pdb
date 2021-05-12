@@ -10,7 +10,7 @@ class ChooseType extends Component {
     super(props);
     console.log("chooseType props", this.props);
     this.state = {
-      new_surfskate: {
+      newsurfskate: {
         type: "none"
       }
     };
@@ -18,17 +18,17 @@ class ChooseType extends Component {
 
   handleTypeChange = (type) => {
     this.setState({
-      new_surfskate: {
+      newsurfskate: {
         type: type
       }
     });
-    console.log(type);
-    this.props.onTypeHasChanged({ type });
+
+    this.props.onTypeHasChanged(type);
   };
 
   render() {
-    const type = this.state.new_surfskate.type;
-
+    const typeprops = this.props.type;
+    const typestate = this.state.newsurfskate.type;
     return (
       <div className='container'>
         <div className='wrapper'>
@@ -36,15 +36,18 @@ class ChooseType extends Component {
             <div>
               <h2>Type</h2>
 
-              <p>Choose {type}</p>
+              <p>
+                Choose <br />
+                Props:...{typeprops} <br />
+                State:...{typestate}
+              </p>
             </div>
           </div>
           <button
             className='choose-type-teaser type-one'
-            //onClick={this.handleButtonClickEcho}
             onClick={() => this.handleTypeChange("echo")}
           >
-            {(type === "echo" && (
+            {(typestate === "echo" && (
               <div className='selected'>
                 <div className='choose-type-box'>
                   <img src={ECHO} alt='surfskateimage' />
@@ -67,7 +70,7 @@ class ChooseType extends Component {
             className='choose-type-teaser type-two'
             onClick={() => this.handleTypeChange("ulu")}
           >
-            {(type === "ulu" && (
+            {(typestate === "ulu" && (
               <div className='selected'>
                 <div className='choose-type-box'>
                   <img src={ULU} alt='surfskateimage' />

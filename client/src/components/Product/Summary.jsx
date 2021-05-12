@@ -11,25 +11,27 @@ class Summary extends Component {
     // };
   }
   render() {
+    const wheelprops = this.props.wheel;
+    const typeprops = this.props.type;
     return (
       <div className='container'>
         <div className='wrapper'>
           <div className='summary-title'>
             <div>
               <h2>Summary</h2>
-              <p>Wheels: {this.props.wheel}</p>
-              <p>Please check your configuration and add it to your order.</p>
+              
+              <p>...</p>
             </div>
           </div>
           <div className='summary'>
             <table>
               <tr>
-                <td>Type: ECHO</td>
+                <td>Type: {typeprops}</td>
 
                 <td>200.000 IDR</td>
               </tr>
               <tr>
-                <td>Wheels: Green</td>
+                <td>Wheels: {wheelprops}</td>
 
                 <td>50.000 IDR</td>
               </tr>
